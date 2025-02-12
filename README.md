@@ -30,27 +30,33 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 </ol>
 
 <h2>Installation Steps</h2>
-<img width="1208" alt="Screenshot 2025-02-11 at 11 22 18 AM" src="https://github.com/user-attachments/assets/ac20c712-f0c7-4266-b27b-e84c58464416" />
-<img width="1232" alt="Screenshot 2025-02-11 at 11 22 54 AM" src="https://github.com/user-attachments/assets/dec7f522-b9a7-469c-8dd1-b477395d9c8d" />
-<img width="1230" alt="Screenshot 2025-02-11 at 11 24 03 AM" src="https://github.com/user-attachments/assets/82964dad-eead-49c1-bddb-72172b21331c" />
 <p>
 Create a Virtual Machine(VM) on Azure.
 Be sure to create a resource.
-Name it and then click on Windows 10
+Name it and then click on Windows 10 for image.
 Make sure to create your VM and resource in the same region
 Get one thats runs on 2cpus
-Click the check box and create the VM
+Click the check box and create the VM.
 </p>
+<img width="1208" alt="Screenshot 2025-02-11 at 11 22 18 AM" src="https://github.com/user-attachments/assets/ac20c712-f0c7-4266-b27b-e84c58464416" />
+<img width="1232" alt="Screenshot 2025-02-11 at 11 22 54 AM" src="https://github.com/user-attachments/assets/dec7f522-b9a7-469c-8dd1-b477395d9c8d" />
+<img width="1230" alt="Screenshot 2025-02-11 at 11 24 03 AM" src="https://github.com/user-attachments/assets/82964dad-eead-49c1-bddb-72172b21331c" />
+
+<br />
+<br />
+<br />
 <br />
 
+
+<p>
+Launch the VM (virtual machine) with its public IP address
+Open Windows App and create a new VM. Then launch with the credentials that you made when creating the VM. 
+</p>
 <img width="1225" alt="Screenshot 2025-02-11 at 1 52 55 PM" src="https://github.com/user-attachments/assets/922a38fe-7367-491f-801d-a2c55f2c88af" />
 <img width="1164" alt="Screenshot 2025-02-11 at 1 54 10 PM" src="https://github.com/user-attachments/assets/327bc04d-d8e3-4bc0-a66f-a89c45ee640b" />
 <img width="1163" alt="Screenshot 2025-02-11 at 1 55 14 PM" src="https://github.com/user-attachments/assets/8ba24a5b-b5b6-40b5-b939-a8c43b359c19" />
 
-<p>
-Launch the VM (virtual machine) with its public IP address
-Open Windows App and create a new VM and launch with the credentials that you made when creating the VM. 
-</p>
+
 <br />
 
 
