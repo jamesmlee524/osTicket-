@@ -21,14 +21,16 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 - Windows 10</b> (21H2)
 
 <h2>List of Prerequisites</h2>
-
-1 - enable internet info services iis
-2 - install web platform installer
-3 - install mySQL and set up user and pass
-4 - install C++ redistub
-5 - configure permissions and install osTicket
+<ol>
+    <li>Enable Internet Information Services (IIS)</li>
+    <li>Install Web Platform Installer</li>
+    <li>Install MySQL and set up user and pass</li>
+    <li>Install C++ Redistributable</li>
+    <li>Configure permissions and install osTicket</li>
+</ol>
 
 <h2>Installation Steps</h2>
+
 
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
