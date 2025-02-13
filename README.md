@@ -67,9 +67,11 @@ Within the VM (osticket-vm), download the osTicket-Installation-Files.zip and un
 </p>
 
 <p>
-Install / Enable IIS in Windows WITH CGI
-From the “osTicket-Installation-Files” folder, install PHP Manager for IIS (PHPManagerForIIS_V1.5.0.msi)
-From the “osTicket-Installation-Files” folder install the Rewrite Module (rewrite_amd64_en-US.msi)
+<ol>
+    <li>Install / Enable IIS in Windows WITH CGI</li>
+    <li>From the “osTicket-Installation-Files” folder, install PHP Manager for IIS (PHPManagerForIIS_V1.5.0.msi)</li>
+    <li>From the “osTicket-Installation-Files” folder install the Rewrite Module (rewrite_amd64_en-US.msi)</li>
+</ol>
 </p>
 
 <p>
