@@ -65,6 +65,7 @@ Open Windows App and create a new VM. Then launch with the credentials that you 
 <p>
 Within the VM (osticket-vm), download the osTicket-Installation-Files.zip and unzip it onto your desktop. The folder should be called “osTicket-Installation-Files”
 </p>
+<img width="1536" alt="Screenshot 2025-02-11 at 1 59 33 PM" src="https://github.com/user-attachments/assets/b25f6c6a-6023-4b11-9eed-59f9c20b84f1" />
 
 <p>
 <ol>
@@ -73,9 +74,98 @@ Within the VM (osticket-vm), download the osTicket-Installation-Files.zip and un
     <li>From the “osTicket-Installation-Files” folder install the Rewrite Module (rewrite_amd64_en-US.msi)</li>
 </ol>
 </p>
+<img width="1536" alt="Screenshot 2025-02-11 at 2 33 37 PM" src="https://github.com/user-attachments/assets/ed2cf6d0-0391-4395-ba09-fa97a946bf50" />
+<img width="1536" alt="Screenshot 2025-02-11 at 2 35 33 PM" src="https://github.com/user-attachments/assets/eb55f222-5bf0-4ae2-b6a0-c291c3e022ac" />
 
 <p>
 Create the directory C:\PHP
 From the “osTicket-Installation-Files” folder, unzip PHP 7.3.8 (php-7.3.8-nts-Win32-VC15-x86.zip) into the “C:\PHP” folder
 </p>
+<img width="1536" alt="Screenshot 2025-02-11 at 2 36 45 PM" src="https://github.com/user-attachments/assets/fbd8a6dc-dfa9-47fd-ade6-9f5e74590089" />
+
+unzip PHP 7.3.8 (php-7.3.8-nts-Win32-VC15-x86.zip) into the “C:\PHP” folder
+<img width="1536" alt="Screenshot 2025-02-11 at 2 37 35 PM" src="https://github.com/user-attachments/assets/ed59c1cd-2aed-471b-8b41-a4564160045d" />
+
+From the “osTicket-Installation-Files” folder, install VC_redist.x86.exe.
+<img width="1536" alt="Screenshot 2025-02-11 at 2 38 45 PM" src="https://github.com/user-attachments/assets/00f87557-af4f-4a6c-8a20-7888bd6a0c45" />
+
+
+From the “osTicket-Installation-Files” folder, install MySQL 5.5.62 (mysql-5.5.62-win32.msi)
+<img width="1536" alt="Screenshot 2025-02-11 at 2 39 08 PM" src="https://github.com/user-attachments/assets/db0d6fbb-c876-4b9d-bec0-f6f74235c467" />
+
+Typical Setup ->
+Launch Configuration Wizard (after install) ->
+Standard Configuration ->
+Username: root
+Password: root
+<img width="1536" alt="Screenshot 2025-02-11 at 2 39 43 PM" src="https://github.com/user-attachments/assets/4206a482-c694-4b26-b8a1-cbfeb680eeb4" />
+
+
+Open IIS as an Admin
+Register PHP from within IIS (PHP Manager -> C:\PHP\php-cgi.exe)
+Reload IIS (Open IIS, Stop and Start the server)
+<img width="1536" alt="Screenshot 2025-02-11 at 2 42 35 PM" src="https://github.com/user-attachments/assets/7af3d630-3fc7-42b5-8889-12859d86a86f" />
+
+
+
+Install osTicket v1.15.8
+From the “osTicket-Installation-Files” folder, unzip “osTicket-v1.15.8.zip” and copy the “upload” folder into “c:\inetpub\wwwroot”
+Within “c:\inetpub\wwwroot”, Rename “upload” to “osTicket”
+
+<img width="1536" alt="Screenshot 2025-02-11 at 2 46 22 PM" src="https://github.com/user-attachments/assets/4d7aabfa-0ca4-4ecb-9725-c04580f81df5" />
+
+Reload IIS (Open IIS, Stop and Start the server)
+<img width="1536" alt="Screenshot 2025-02-11 at 2 43 27 PM" src="https://github.com/user-attachments/assets/681bb71f-ee75-4db4-ad7b-9a1f5edc94da" />
+
+
+Go to sites -> Default -> osTicket
+On the right, click “Browse *:80”
+<img width="1536" alt="Screenshot 2025-02-11 at 2 47 36 PM" src="https://github.com/user-attachments/assets/95414ead-0006-437e-80f2-3ca03046a3dd" />
+
+
+Note that some extensions are not enabled
+Go back to IIS, sites -> Default -> osTicket
+Double-click PHP Manager
+Click “Enable or disable an extension”
+Enable: php_imap.dll
+Enable: php_intl.dll
+Enable: php_opcache.dll
+Refresh the osTicket site in your browser, observe the changes
+<img width="1536" alt="Screenshot 2025-02-11 at 2 50 36 PM" src="https://github.com/user-attachments/assets/4ae4ba4a-3424-4d72-952e-d1e96d3416b0" />
+
+
+Rename: ost-config.php
+From: C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php
+To: C:\inetpub\wwwroot\osTicket\include\ost-config.php
+Assign Permissions: ost-config.php
+Disable inheritance -> Remove All
+New Permissions -> Everyone -> All
+<img width="1536" alt="Screenshot 2025-02-11 at 2 54 23 PM" src="https://github.com/user-attachments/assets/70ed097c-393b-42b9-ba75-98dfc8aec204" />
+
+
+Continue Setting up osTicket in the browser (click Continue)
+Name Helpdesk
+Default email (receives email from customers)
+
+From the “osTicket-Installation-Files” folder, install HeidiSQL.
+Open Heidi SQL
+Create a new session, root/root
+Connect to the session
+Create a database called “osTicket”
+
+Continue Setting up osTicket in the browser
+MySQL Database: osTicket
+MySQL Username: root
+MySQL Password: root
+Click “Install Now!”
+<img width="1536" alt="Screenshot 2025-02-11 at 2 55 34 PM" src="https://github.com/user-attachments/assets/462aa19a-2811-450f-b3f6-cd9973cc567c" />
+
+
+Congratulations, hopefully it is installed with no errors!
+Browse to your help desk login page: http://localhost/osTicket/scp/login.php
+
+End Users osTicket URL:
+http://localhost/osTicket/ 
+
+
 <br />
